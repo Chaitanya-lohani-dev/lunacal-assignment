@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.glass-widget {
+  /* Yeh aapka dhoondha hua gradient hai */
+  background: linear-gradient(327.89deg, #4A4E54 -1.73%, #A3ADBA 89.26%);
+  
+  /* Iske saath yeh properties bhi zaroori hongi 'glass' effect ke liye */
+  backdrop-filter: blur(10px); /* Peeche ki cheezon ko blur karta hai */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Halka sa white border */
+  
+  /* NOTE: Tailwind ki `bg-opacity-50` jaisi class ko hata dein agar aap is class ka use kar rahe hain, 
+     kyunki yeh background use overwrite kar degi. */
+}
