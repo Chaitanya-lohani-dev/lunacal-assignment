@@ -1,17 +1,22 @@
-import AboutWidget from "../components/AboutWidget";
-import GalleryWidget from "../components/GalleryWidget";
+import "./globals.css";
+import AboutWidget from "./components/AboutWidget";
+import GalleryWidget from "./components/GalleryWidget";
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row min-h-screen bg-gray-900 text-white p-8 lg:p-12">
-      <div className="hidden lg:block lg:w-1/2">
-      </div>
 
-      <div className="w-full lg:w-1/2 glass-widget">
+    <main >
+      <div className="main-container w-full max-w-7xl flex flex-col lg:flex-row overflow-hidden">
         
-        <div className="flex flex-col gap-8 glass-widget">
-          <AboutWidget />
-          <GalleryWidget />
+        <div className="hidden lg:block lg:w-1/2 p-8">
+          {/* Empty */}
+        </div>
+        
+        <div className="w-full lg:w-1/2 p-8">
+          <div className="flex flex-col gap-8">
+            <AboutWidget />
+            <GalleryWidget />
+          </div>
         </div>
 
       </div>

@@ -5,7 +5,7 @@
   --foreground: #171717;
 }
 
-@theme inline {
+:root[data-theme="inline"] {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -26,13 +26,16 @@ body {
 }
 
 .glass-widget {
-  /* Yeh aapka dhoondha hua gradient hai */
+
   background: linear-gradient(327.89deg, #4A4E54 -1.73%, #A3ADBA 89.26%);
-  
-  /* Iske saath yeh properties bhi zaroori hongi 'glass' effect ke liye */
-  backdrop-filter: blur(10px); /* Peeche ki cheezon ko blur karta hai */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Halka sa white border */
-  
-  /* NOTE: Tailwind ki `bg-opacity-50` jaisi class ko hata dein agar aap is class ka use kar rahe hain, 
-     kyunki yeh background use overwrite kar degi. */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.main-container {
+  background: linear-gradient(180deg, #373E44 -100%, #191B1F 100%);
+  border-radius: 28px;
+  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.5); 
+}
+
